@@ -21,4 +21,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showNumber(SCD40.get_temperature(SCD40.SCD40_T_UNIT.C), 100)
 })
+input.onPinTouchEvent(TouchPin.P0, input.buttonEventDown(), function () {
+    basic.showNumber(SCD40.get_relative_humidity(), 100)
+})
 basic.showString("Ich bin CO2 ", 100)
